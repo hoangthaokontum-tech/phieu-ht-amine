@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Phiếu Học Tập Tương Tác</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header" id="header-container"></header>
+
+        <!-- Thông tin học sinh -->
+        <section class="card student-info">
+            <h2>👩‍🎓 THÔNG TIN HỌC SINH</h2>
+            <form id="student-form">
+                <div class="form-group">
+                    <label>Họ và tên:</label>
+                    <input type="text" id="student-name" placeholder="Nhập họ và tên..." required>
+                </div>
+                <div class="form-group">
+                    <label>Lớp:</label>
+                    <input type="text" id="student-class" placeholder="Nhập lớp..." required>
+                </div>
+                <div class="form-group">
+                    <label>Ngày làm bài:</label>
+                    <input type="date" id="student-date" required>
+                </div>
+            </form>
+        </section>
+
+        <!-- Mục tiêu bài học -->
+        <section class="card goals-section">
+            <h2>🎯 MỤC TIÊU BÀI HỌC</h2>
+            <div id="goals-container" class="goals-grid"></div>
+        </section>
+
+        <!-- Khu vực câu hỏi -->
+        <div id="quiz-container"></div>
+
+        <!-- Ghi nhớ -->
+        <section class="card remember-section">
+            <h2>🧠 GHI NHỚ CUỐI BÀI</h2>
+            <ul id="remember-container"></ul>
+        </section>
+
+        <!-- Nút chức năng -->
+        <div class="actions-bar">
+            <button id="btn-submit" class="btn primary-btn">🚀 NỘP BÀI</button>
+            <button id="btn-reset" class="btn secondary-btn">↻ LÀM LẠI</button>
+        </div>
+
+        <!-- Khu vực hiển thị kết quả -->
+        <div id="result-overlay" class="hidden">
+            <div class="result-card">
+                <h2 id="res-name">🎉 </h2>
+                <div class="score-circle">
+                    <span id="res-score">0/0</span>
+                </div>
+                <p id="res-percent">Tỉ lệ: 0%</p>
+                <button id="btn-close-result" class="btn primary-btn">Đóng</button>
+            </div>
+        </div>
+        
+        <!-- Toast Notification -->
+        <div id="toast" class="toast hidden"></div>
+    </div>
+
+    <!-- Nạp dữ liệu và kịch bản -->
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
